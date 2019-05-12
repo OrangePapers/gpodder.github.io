@@ -24,6 +24,20 @@ Where are my downloaded episodes?
 
 You can find the answer in the [user manual](user-manual.html#gpodder-home-folder-and-download-location).
 
+No, you won't.  The User Manual is incorrect.  All explanations and examples are wrong for Debian Linux.
+The correct answer is: Your home directory is /home/[your_user_name]/gPodder, and the downloaded podcasts
+are in /home/[your_user_name]/gPodder/Downloads.
+
+If you are having a problem with storage space, you can move all of your files to an external disk.
+For example, I have a USB 5TB external drive called /d12. So, I did this (while gPodder is not running):
+
+mkdir -p /d12/podcasts/gPodder
+cd ~/gPodder
+mv -iv Downloads /d12/podcasts/gPodder
+ln -s /d12/podcasts/gPodder/Downloads Downloads
+
+Then restart gPodder.
+
 I believe my gPodder configuration is corrupted - how do I start out with a fresh config?
 --------------------------------------------------------------------------------
 
